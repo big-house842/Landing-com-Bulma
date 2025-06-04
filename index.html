@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soluções Digitais</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <nav class="navbar is-light">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">Minha Empresa</a>
+        <div class="navbar-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item is-active" href="#">Início</a>
+          <a class="navbar-item" href="#servicos">Serviços</a>
+          <a class="navbar-item" href="#contato">Contato</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Soluções Digitais</h1>
+        <p class="subtitle">Transformando ideias em realidade</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="section">
+    <div class="container">
+      <h2 class="title has-text-centered">Nossos Serviços</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="box has-text-centered">
+            <span class="icon is-large has-text-info">
+              <i class="fas fa-globe fa-3x"></i>
+            </span>
+            <h3 class="title is-4">Programação Web</h3>
+            <p>Sites e aplicativos personalizados</p>
+            <a class="button is-info is-outlined mt-3">Saiba mais</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box has-text-centered">
+            <span class="icon is-large has-text-info">
+              <i class="fas fa-mobile-alt fa-3x"></i>
+            </span>
+            <h3 class="title is-4">Aplicativos</h3>
+            <p>Desenvolvimento mobile</p>
+            <a class="button is-info is-outlined mt-3">Saiba mais</a>
+          </div>
+        </div>
+        <div class="column">
+          <div class="box has-text-centered">
+            <span class="icon is-large has-text-info">
+              <i class="fas fa-chart-line fa-3x"></i>
+            </span>
+            <h3 class="title is-4">Marketing</h3>
+            <p>Estratégias digitais</p>
+            <a class="button is-info is-outlined mt-3">Saiba mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="section">
+    <div class="container">
+      <h2 class="title has-text-centered">Contato</h2>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <form>
+            <div class="field">
+              <label class="label">Nome</label>
+              <input class="input" type="text">
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <input class="input" type="email">
+            </div>
+            <div class="field">
+              <label class="label">Mensagem</label>
+              <textarea class="textarea"></textarea>
+            </div>
+            <button class="button is-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>&copy; Minha Empresa. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const navbarBurgers = document.querySelectorAll('.navbar-burger');
+      navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const targetEl = document.getElementById(target);
+          el.classList.toggle('is-active');
+          targetEl.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
